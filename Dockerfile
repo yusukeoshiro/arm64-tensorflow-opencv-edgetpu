@@ -111,3 +111,9 @@ RUN apt-get install -yq wget libssl-dev openssl build-essential gcc zlib1g-dev
 RUN apt-get install -y usbutils curl
 RUN python3.7 -m pip install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_aarch64.whl
 
+# clean up
+RUN rm tensorflow-2.0.0-cp37-none-linux_aarch64.whl
+RUN rm scipy-1.4.1.tar.gz
+RUN rm -rf scipy-1.4.1
+RUN rm get-pip.py
+RUN apt autoclean -y
